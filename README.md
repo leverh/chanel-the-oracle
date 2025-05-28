@@ -18,6 +18,10 @@ A whimsical fortune-telling web app featuring Chanel, the most loving and wise o
 3. **Receive Your Fortune**: Get a contextually appropriate response delivered in Chanel's unique voice
 4. **Ask Again**: Clear slate for your next burning question
 
+## 🚀 Live Demo
+[Link](https://sensational-gaufre-78e278.netlify.app/) to live site
+
+
 ## 🛠️ Tech Stack
 
 - **React 19**
@@ -157,7 +161,7 @@ This project is licensed under the MIT License. Copy or share - I really don't c
 
 ## Contact
 
-You can find my portfolio and contact info here at [PixelSummit.dev](https://pixelsummit.dev/)
+You can find my portfolio and contact details here at [PixelSummit.dev](https://pixelsummit.dev/)
 
 ---
 
