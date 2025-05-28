@@ -1,12 +1,17 @@
 import './FortuneCard.css';
+import chanelImage from '../../assets/chanel-oracle.png';
 
 function FortuneCard({ fortune, isRevealing, onNewQuestion }) {
   return (
     <div className="fortune-card">
       <div className="cat-section">
         <div className="cat-avatar">
-          <div className="cat-placeholder">
-            🐱
+          <div className="cat-image-container">
+            <img 
+              src={chanelImage} 
+              alt="Chanel the Oracle Cat" 
+              className="chanel-photo"
+            />
             <span className="cat-name">Chanel</span>
           </div>
         </div>

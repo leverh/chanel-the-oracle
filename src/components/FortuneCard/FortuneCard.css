@@ -30,20 +30,39 @@
   position: relative;
 }
 
-.cat-placeholder {
-  font-size: 8rem;
+.cat-image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.chanel-photo {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--accent);
+  box-shadow: 
+    0 8px 25px var(--shadow),
+    0 0 0 1px var(--border);
+  transition: all 0.3s ease;
   filter: drop-shadow(0 4px 8px var(--shadow));
+}
+
+.chanel-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 12px 35px var(--shadow),
+    0 0 0 1px var(--border);
 }
 
 .cat-name {
   font-size: 2.2rem;
   color: var(--text-secondary);
   font-weight: 600;
-  font-family: 'Georgia', serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 /* Thinking Animation */
