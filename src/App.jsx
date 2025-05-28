@@ -15,11 +15,13 @@ function App() {
   const handleGetFortune = () => {
     if (!question.trim()) return;
     
+    const currentQuestion = question;
     setIsRevealing(true);
+    setQuestion(''); // Clear the question upon submission
     
-    // Simulate Cat "thinking" 
+    // Simulate cat "thinking" 
     setTimeout(() => {
-      const contextualFortune = getContextualFortune(question);
+      const contextualFortune = getContextualFortune(currentQuestion);
       setCurrentFortune(contextualFortune);
       setIsRevealing(false);
     }, 2000);
