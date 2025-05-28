@@ -1,0 +1,90 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Mode Theme */
+.light-mode {
+  --bg-primary: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 50%, #e6f3ff 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.9);
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --text-primary: #2d1b3d;
+  --text-secondary: #6b46c1;
+  --text-muted: #7c6b8a;
+  --accent: #ec4899;
+  --accent-hover: #db2777;
+  --border: rgba(139, 92, 246, 0.2);
+  --shadow: rgba(139, 92, 246, 0.15);
+  --button-bg: linear-gradient(135deg, #ec4899, #8b5cf6);
+  --button-hover: linear-gradient(135deg, #db2777, #7c3aed);
+}
+
+/* Dark Mode Theme */
+.dark-mode {
+  --bg-primary: linear-gradient(135deg, #0f0a1a 0%, #1a0d2e 50%, #2d1b3d 100%);
+  --bg-secondary: rgba(30, 20, 50, 0.9);
+  --bg-card: rgba(45, 27, 61, 0.95);
+  --text-primary: #f8fafc;
+  --text-secondary: #c084fc;
+  --text-muted: #a78bfa;
+  --accent: #f472b6;
+  --accent-hover: #ec4899;
+  --border: rgba(196, 132, 252, 0.3);
+  --shadow: rgba(139, 92, 246, 0.25);
+  --button-bg: linear-gradient(135deg, #f472b6, #a855f7);
+  --button-hover: linear-gradient(135deg, #ec4899, #9333ea);
+}
+
+/* Base App Styles */
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,185 @@
+.fortune-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(15px);
+  border-radius: 2.5rem;
+  padding: 4rem 3rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px var(--shadow);
+  width: 100%;
+  max-width: 70rem;
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  transition: all 0.3s ease;
+}
+
+.fortune-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 50px var(--shadow);
+}
+
+.cat-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cat-avatar {
+  position: relative;
+}
+
+.cat-placeholder {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  filter: drop-shadow(0 4px 8px var(--shadow));
+}
+
+.cat-name {
+  font-size: 2.2rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-family: 'Georgia', serif;
+}
+
+/* Thinking Animation */
+.thinking-indicator {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.thinking-indicator p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.thinking-dots {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.thinking-dots span {
+  width: 1rem;
+  height: 1rem;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: thinking 1.4s infinite ease-in-out both;
+}
+
+.thinking-dots span:nth-child(1) { animation-delay: -0.32s; }
+.thinking-dots span:nth-child(2) { animation-delay: -0.16s; }
+.thinking-dots span:nth-child(3) { animation-delay: 0s; }
+
+@keyframes thinking {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fortune Display */
+.fortune-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.fortune-reveal {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.fortune-text {
+  background: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.fortune-text::before {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid var(--bg-secondary);
+}
+
+.fortune-text p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.welcome-message {
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.new-question-btn {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.new-question-btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fortune-card {
+    padding: 2.5rem 2rem;
+    min-height: 30rem;
+  }
+  
+  .cat-placeholder {
+    font-size: 6rem;
+  }
+  
+  .fortune-text p {
+    font-size: 1.8rem;
+  }
+}
