@@ -33,7 +33,14 @@ export const keywords = {
   health: ['health', 'sick', 'doctor', 'medicine', 'hospital', 'diet', 'exercise', 'wellness', 'tired', 'energy', 'sleep'],
   travel: ['travel', 'trip', 'vacation', 'journey', 'flight', 'abroad', 'visit', 'adventure', 'holiday'],
   family: ['family', 'mom', 'dad', 'mother', 'father', 'parent', 'child', 'kids', 'sister', 'brother', 'relative'],
-  education: ['school', 'college', 'study', 'exam', 'test', 'grade', 'university', 'learning', 'student', 'homework']
+  education: ['school', 'college', 'study', 'exam', 'test', 'grade', 'university', 'learning', 'student', 'homework'],
+  food: ['food', 'eat', 'cooking', 'recipe', 'restaurant', 'dinner', 'lunch', 'breakfast', 'hungry', 'meal', 'kitchen', 'chef', 'cuisine', 'snack', 'dessert'],
+  luck: ['luck', 'lucky', 'lottery', 'win', 'winning', 'contest', 'prize', 'jackpot', 'fortune', 'chance', 'gambling', 'bet', 'raffle', 'sweepstakes'],
+  pets: ['pet', 'dog', 'cat', 'bird', 'fish', 'hamster', 'rabbit', 'animal', 'vet', 'puppy', 'kitten', 'furry', 'paw', 'tail'],
+  home: ['home', 'house', 'apartment', 'room', 'furniture', 'decorating', 'cleaning', 'neighbor', 'roommate', 'moving', 'rent'],
+  friendship: ['friend', 'friends', 'buddy', 'pal', 'social', 'party', 'hangout', 'bestie', 'friendship', 'group'],
+  creativity: ['art', 'creative', 'paint', 'draw', 'music', 'write', 'craft', 'hobby', 'project', 'inspiration', 'talent'],
+  decisions: ['should', 'choose', 'decision', 'decide', 'pick', 'option', 'choice', 'help', 'advice', 'what', 'which']
 };
 
 // Fortunes by category
@@ -89,6 +96,68 @@ export const fortuneCategories = {
     "After consulting the ancient feline prophecies... the answer is yes, but only if it involves treats.",
     "My mystical cat senses detect... you should probably clean my litter box before expecting good fortune.",
     "The cosmic yarn ball has spoken... your future is bright, like the red dot I must catch."
+  ],
+  food: [
+    "The sacred food bowl wisdom reveals... your culinary adventures will be blessed, especially if they involve opening more cans.",
+    "My sophisticated palate suggests... the perfect meal awaits you, though it probably won't be as good as my premium kibble.",
+    "The ancient art of meal timing declares... your dining experience will be purr-fect, assuming you eat at proper intervals like my 6am breakfast.",
+    "Through my extensive food quality control experience... success in the kitchen comes to those who taste-test frequently and nap between courses.",
+    "The cosmic energies of the treat jar whisper... abundance flows to those who understand that the best meals are shared (hint: with cats).",
+    "My culinary expertise, gained from years of knocking food off tables, reveals... your next meal will bring unexpected joy and possibly some cleanup."
+  ],
+  
+  luck: [
+    "The cosmic lottery of life spins in your favor... like when I successfully catch the red dot (it hasn't happened yet, but I remain optimistic).",
+    "My whiskers detect favorable odds... fortune smiles upon you, much like how I smile when the treat bag rustles.",
+    "The ancient cat gambling wisdom suggests... luck comes to those who pounce at the right moment, preferably with treats involved.",
+    "Through my mastery of probability (demonstrated by my 50/50 success rate at landing on my feet)... the odds are ever in your favor.",
+    "The mystical forces of chance align... your lucky break approaches like my 3am zoomies - sudden, powerful, and impossible to ignore.",
+    "I have consulted the sacred randomness of where my toys end up... fortune favors the bold, especially those who leave offerings of catnip."
+  ],
+  
+  pets: [
+    "My superior animal wisdom reveals... your furry friends bring more joy than a perfectly warm cardboard box.",
+    "The ancient pack dynamics speak through my territorial expertise... your pets are plotting something adorable, probably involving treats.",
+    "Through my understanding of interspecies communication... your animal companions are trying to tell you something important about dinner time.",
+    "The cosmic bond between species whispers... your pets love you almost as much as I love ignoring you when you call my name.",
+    "My extensive research into human-animal relationships indicates... your furry family members deserve extra treats and belly rubs today.",
+    "The sacred connection between all creatures reveals... your pets are your greatest teachers in the art of unconditional love and strategic napping."
+  ],
+  
+  home: [
+    "The feng shui of my favorite hiding spots reveals... your living space will soon reflect your inner harmony, preferably with more cat furniture.",
+    "Through my architectural expertise in box fort construction... your home improvements will create the perfect sanctuary for relaxation.",
+    "The domestic energies flowing through my territory suggest... your living situation will evolve beautifully, like my collection of claimed cardboard boxes.",
+    "My real estate experience (gained from claiming every sunny spot) indicates... home is where you can nap undisturbed and the food bowl never empties.",
+    "The ancient wisdom of territorial management declares... your home will become an even more perfect reflection of comfort and style.",
+    "Through my understanding of optimal living conditions... your domestic bliss will flourish like catnip in spring sunshine."
+  ],
+  
+  friendship: [
+    "The social dynamics of my carefully curated human relationships reveal... your friendships will deepen like my afternoon naps.",
+    "Through my expertise in selective socialization... the right companions will find you, much like I choose my favorite humans for maximum cuddle potential.",
+    "The cosmic bonds of chosen family whisper... your social circle will bring joy, laughter, and possibly group activities involving laser pointers.",
+    "My understanding of pack behavior suggests... true friends are like reliable food servers - consistent, caring, and they always show up on time.",
+    "The ancient art of friendship maintenance declares... your social connections will strengthen through shared experiences and mutual treat exchanges.",
+    "Through my observations of human bonding rituals... your friendships will flourish like my energy during playtime - abundant and full of joy."
+  ],
+  
+  creativity: [
+    "The artistic inspiration flowing through my graceful movements reveals... your creative projects will flourish like my interpretive dance at 3am.",
+    "Through my masterful interior design skills (strategic fur placement)... your artistic endeavors will leave a lasting impression on everyone.",
+    "The cosmic muse speaks through my aesthetic appreciation of empty boxes... creativity flows to those who see potential in the simplest things.",
+    "My artistic vision, refined through years of creating abstract patterns in litter... your creative spark will ignite something truly magnificent.",
+    "The ancient wisdom of creative expression whispers... inspiration strikes like my pouncing technique - swift, precise, and utterly captivating.",
+    "Through my understanding of performance art (daily licking presentations)... your talents will shine brighter than my eyes reflecting a camera flash."
+  ],
+  
+  decisions: [
+    "The decision-making wisdom of my daily choice between seventeen napping spots reveals... trust your instincts, they're probably right.",
+    "Through my expertise in life choices (nap now or nap later?)... the path forward will become clear like a clean window on a sunny day.",
+    "The cosmic guidance system of my superior judgment suggests... the right choice is often the one that leads to the most comfortable outcome.",
+    "My decision-making process, perfected through years of treat selection... follow your heart, but also consider which option provides the best snacks.",
+    "The ancient art of choice navigation declares... sometimes the best decision is to take a nap and let the universe sort itself out.",
+    "Through my strategic thinking abilities (demonstrated by my complex plans to reach high shelves)... the answer you seek is already within you, probably near the treats."
   ]
 };
 
