@@ -60,10 +60,11 @@
 }
 
 .cat-name {
-  font-size: 2.2rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  font-weight: 600;
-  font-family: 'Source Sans 3', sans-serif;
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
 }
 
 /* Thinking Animation */
@@ -150,6 +151,26 @@
   font-weight: 500;
 }
 
+/* Typewriter cursor animation */
+.typing-cursor {
+  animation: blink 1s infinite;
+  font-weight: 100;
+  color: var(--accent);
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.fortune-text p.typing {
+  min-height: 1.2em;
+}
+
+.typing {
+  text-shadow: 0 0 10px rgba(var(--accent-rgb, 147, 51, 234), 0.3);
+}
+
 .cosmic-disclaimer {
   font-size: 0.8em;
   font-style: italic;
@@ -159,7 +180,7 @@
 
 .welcome-message {
   color: var(--text-muted);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   font-style: italic;
 }

@@ -1,0 +1,279 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.welcome-modal {
+  background: var(--bg-card);
+  backdrop-filter: blur(15px);
+  border-radius: 2.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 65rem;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes modalSlideIn {
+  from { 
+    opacity: 0;
+    transform: translateY(3rem) scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+  background: rgba(236, 72, 153, 0.1);
+  transform: scale(1.1);
+}
+
+.modal-header {
+  text-align: center;
+  padding: 3rem 3rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-cat-image {
+  margin-bottom: 2rem;
+}
+
+.modal-cat-image img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-symbol {
+  color: var(--accent);
+  animation: sparkleRotate 3s ease-in-out infinite;
+}
+
+@keyframes sparkleRotate {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.1); }
+}
+
+.modal-content {
+  padding: 3rem;
+}
+
+.welcome-text {
+  margin-bottom: 3rem;
+}
+
+.welcome-text p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.disclaimer-section {
+  background: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid var(--border);
+}
+
+.disclaimer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mystical-icon {
+  color: var(--accent);
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.disclaimer-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.disclaimer-text p {
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.additional-disclaimer {
+  opacity: 0.8;
+  font-size: 1.3rem;
+}
+
+.modal-footer {
+  padding: 2rem 3rem 3rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.begin-consultation-btn {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px var(--shadow);
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.begin-consultation-btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 1rem;
+  }
+  
+  .welcome-modal {
+    border-radius: 2rem;
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 2.5rem 2rem 1.5rem;
+  }
+  
+  .modal-cat-image img {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .modal-title {
+    font-size: 2.4rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-content {
+    padding: 2rem;
+  }
+  
+  .disclaimer-section {
+    padding: 2rem;
+  }
+  
+  .disclaimer-title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-footer {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+  
+  .begin-consultation-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-close {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-text p {
+    font-size: 1.5rem;
+  }
+  
+  .disclaimer-text {
+    font-size: 1.3rem;
+  }
+}
