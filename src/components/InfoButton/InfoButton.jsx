@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './InfoButton.css';
 import WelcomeModal from '../WelcomeModal/WelcomeModal';
+import chanelImage from '../../assets/chanel-oracle.png';
 
 function InfoButton() {
   const [showModal, setShowModal] = useState(false);
@@ -24,7 +25,7 @@ function InfoButton() {
             
             <div className="modal-header">
               <div className="modal-cat-image">
-                <img src="/src/assets/chanel-oracle.png" alt="Chanel the Oracle" />
+                <img src={chanelImage} alt="Chanel the Oracle" />
               </div>
               <h2 className="modal-title">
                 <span className="modal-symbol">✨</span>
