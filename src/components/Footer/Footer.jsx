@@ -39,6 +39,9 @@ function Footer() {
           <span>May the cosmic forces guide your path</span>
           <span className="mystical-symbol">※</span>
         </div>
+        <div className="footer-copyright">
+          © 2025 Chanel's Mystical Predictions. All cosmic rights reserved.
+        </div>
       </div>
     </footer>
   );
