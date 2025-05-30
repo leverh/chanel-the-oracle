@@ -1,5 +1,5 @@
 import './FortuneCard.css';
-import chanelImage from '../../assets/chanel-oracle.png';
+import chanelImage from '../../assets/chanel-oracle1.png';
 
 function FortuneCard({ fortune, isRevealing, onNewQuestion }) {
   return (
@@ -33,6 +33,9 @@ function FortuneCard({ fortune, isRevealing, onNewQuestion }) {
           <div className="fortune-reveal">
             <div className="fortune-text">
               <p>"{fortune}"</p>
+              <p className="cosmic-disclaimer">
+                *Cosmic catnip interference may cause mixed signals. If fortune seems odd, try rephrasing your question - Chanel is not responsible for the universe's quirky sense of humor.*
+              </p>
             </div>
             <button className="new-question-btn" onClick={onNewQuestion}>
               Ask Another Question

@@ -38,12 +38,13 @@
 }
 
 .chanel-photo {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
+  /* width: 100%;
+  max-width: 20rem; */
+  width: 28rem;
+  height: 35rem;
   object-fit: cover;
-  object-position: center top;
-  border: 3px solid var(--accent);
+  border-radius: 10%;
+  border: 1px solid var(--border);
   box-shadow: 
     0 8px 25px var(--shadow),
     0 0 0 1px var(--border);
@@ -142,11 +143,18 @@
   border-top: 1rem solid var(--bg-secondary);
 }
 
-.fortune-text p {
+.fortune-text {
   font-size: 2rem;
   line-height: 1.6;
   color: var(--text-primary);
   font-weight: 500;
+}
+
+.cosmic-disclaimer {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #666;
+  margin-top: .5rem;
 }
 
 .welcome-message {
