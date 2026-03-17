@@ -7,7 +7,7 @@ import FortuneCard from './components/FortuneCard/FortuneCard';
 import QuestionInput from './components/QuestionInput/QuestionInput';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import Footer from './components/Footer/Footer';
-import { getContextualFortune } from './data/fortunes';
+import { getChanelFortune } from './data/catOracle';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,20 +19,17 @@ function App() {
     document.body.className = darkMode ? 'dark-mode' : 'light-mode';
   }, [darkMode]);
 
-  const handleGetFortune = () => {
-    if (!question.trim()) return;
-    
-    const currentQuestion = question;
-    setIsRevealing(true);
-    setQuestion('');
-    
-    // Simulate cat "thinking" 
-    setTimeout(() => {
-      const contextualFortune = getContextualFortune(currentQuestion);
-      setCurrentFortune(contextualFortune);
-      setIsRevealing(false);
-    }, 2000);
-  };
+  const handleGetFortune = async () => {
+  if (!question.trim()) return;
+
+  const currentQuestion = question;
+  setIsRevealing(true);
+  setQuestion('');
+
+  const fortune = await getChanelFortune(currentQuestion);
+  setCurrentFortune(fortune);
+  setIsRevealing(false);
+};
 
   const handleNewQuestion = () => {
     setCurrentFortune('');
