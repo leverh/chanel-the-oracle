@@ -1,29 +1,36 @@
 .question-input {
   width: 100%;
-  max-width: 60rem;
+  max-width: 62rem;
 }
 
 .input-group {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: center;
   background: var(--bg-card);
-  backdrop-filter: blur(15px);
-  border-radius: 2.5rem;
-  padding: 1rem;
+  backdrop-filter: blur(16px);
+  border-radius: 3rem;
+  padding: 0.8rem 0.8rem 0.8rem 2rem;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 25px var(--shadow);
+  box-shadow: 0 8px 30px var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--border-bright);
+  box-shadow: 0 8px 30px var(--shadow), 0 0 0 3px var(--shadow-accent);
 }
 
 .question-field {
   flex: 1;
   background: transparent;
   border: none;
-  padding: 1.5rem 2rem;
-  font-size: 1.6rem;
+  padding: 1.2rem 0;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.8rem;
+  font-style: italic;
   color: var(--text-primary);
   outline: none;
-  font-family: inherit;
 }
 
 .question-field::placeholder {
@@ -33,38 +40,43 @@
 
 .consult-btn {
   background: var(--button-bg);
-  color: white;
+  color: #fff8e7;
   border: none;
-  padding: 1.5rem 3rem;
-  border-radius: 2rem;
-  font-size: 1.6rem;
+  padding: 1.3rem 2.8rem;
+  border-radius: 2.5rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.4rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
   box-shadow: 0 4px 15px var(--shadow);
+  flex-shrink: 0;
 }
 
 .consult-btn:hover:not(:disabled) {
   background: var(--button-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px var(--shadow);
+  box-shadow: 0 6px 22px var(--shadow);
 }
 
 .consult-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .input-group {
     flex-direction: column;
     align-items: stretch;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    gap: 1.5rem;
   }
-  
-  .consult-btn {
-    padding: 1.5rem 2rem;
-  }
+
+  .question-field { padding: 0; }
+
+  .consult-btn { padding: 1.3rem 2rem; text-align: center; }
 }

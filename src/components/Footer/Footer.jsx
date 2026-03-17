@@ -1,3 +1,4 @@
+import StarOrnament from '../StarOrnament/StarOrnament';
 import './Footer.css';
 
 function Footer() {
@@ -6,7 +7,8 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-links">
           <div className="instagram-link">
-            <span className="sparkle">✨</span>
+            <StarOrnament size={16} className="sparkle"></StarOrnament>
+            {/* <span className="sparkle">✧</span> */}
             <span className="footer-text">Follow Chanel's</span>
             <a 
               href="https://www.instagram.com/chanel.kartel/" 
@@ -16,7 +18,8 @@ function Footer() {
             >
               @chanel.kartel
             </a>
-            <span className="sparkle">✨</span>
+            <StarOrnament size={16} className="sparkle"></StarOrnament>
+            {/* <span className="sparkle">✧</span> */}
           </div>
           
           <div className="divider">•</div>
@@ -35,12 +38,14 @@ function Footer() {
         </div>
         
         <div className="footer-tagline">
-          <span className="mystical-symbol">※</span>
+          <StarOrnament size={12} className="mystical-symbol"></StarOrnament>
+          {/* <span className="mystical-symbol">✦</span> */}
           <span>May the cosmic forces guide your path</span>
-          <span className="mystical-symbol">※</span>
+          <StarOrnament size={12} className="mystical-symbol"></StarOrnament>
+          {/* <span className="mystical-symbol">✦</span> */}
         </div>
         <div className="footer-copyright">
-          © 2025 Chanel's Mystical Predictions. All cosmic rights reserved.
+          © {new Date().getFullYear()} Chanel's Mystical Predictions. All cosmic rights reserved.
         </div>
       </div>
     </footer>

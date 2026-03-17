@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './InfoButton.css';
 import WelcomeModal from '../WelcomeModal/WelcomeModal';
+import StarOrnament from '../StarOrnament/StarOrnament';
 import chanelImage from '../../assets/chanel-oracle.png';
 
 function InfoButton() {
@@ -28,9 +29,9 @@ function InfoButton() {
                 <img src={chanelImage} alt="Chanel the Oracle" />
               </div>
               <h2 className="modal-title">
-                <span className="modal-symbol">✨</span>
+                <StarOrnament size={22} animate className="modal-symbol"/>
                 About Chanel & Cosmic Terms
-                <span className="modal-symbol">✨</span>
+                <StarOrnament size={22} animate className="modal-symbol"/>
               </h2>
             </div>
 
@@ -47,9 +48,9 @@ function InfoButton() {
 
               <div className="disclaimer-section">
                 <h3 className="disclaimer-title">
-                  <span className="mystical-icon">※</span>
+                  <StarOrnament size={12} className="mystical-icon"></StarOrnament>
                   Cosmic Consultation Terms
-                  <span className="mystical-icon">※</span>
+                  <StarOrnament size={12} className="mystical-icon"></StarOrnament>
                 </h3>
                 <div className="disclaimer-text">
                   <p>

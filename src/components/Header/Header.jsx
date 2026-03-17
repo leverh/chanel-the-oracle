@@ -1,3 +1,4 @@
+import StarOrnament from '../StarOrnament/StarOrnament';
 import './Header.css';
 
 function Header() {
@@ -5,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <h1 className="title">
-          <span className="title-symbols">※</span> Chanel's Mystical Predictions <span className="title-symbols">※</span>
+            <StarOrnament size={22} animate /> Chanel's Mystical Predictions <StarOrnament size={22} animate />
         </h1>
         <p className="subtitle">Your loving and popular oracle cat is ready to reveal your destiny</p>
       </div>

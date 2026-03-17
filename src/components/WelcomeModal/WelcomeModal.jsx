@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import StarOrnament from '../StarOrnament/StarOrnament';
 import './WelcomeModal.css';
 import chanelImage from '../../assets/chanel-oracle.png';
 
@@ -35,9 +36,9 @@ function WelcomeModal() {
             <img src={chanelImage} alt="Chanel the Oracle" />
           </div>
           <h2 className="modal-title">
-            <span className="modal-symbol">✨</span>
+            <StarOrnament size={22} animate />
             Welcome, Seeker of Wisdom
-            <span className="modal-symbol">✨</span>
+            <StarOrnament size={22} animate />
           </h2>
         </div>
 
@@ -54,9 +55,9 @@ function WelcomeModal() {
 
           <div className="disclaimer-section">
             <h3 className="disclaimer-title">
-              <span className="mystical-icon">※</span>
+              <StarOrnament size={12} className="mystical-icon"></StarOrnament>
               Cosmic Consultation Terms
-              <span className="mystical-icon">※</span>
+              <StarOrnament size={12} className="mystical-icon"></StarOrnament>
             </h3>
             <div className="disclaimer-text">
               <p>

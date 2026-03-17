@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import WelcomeModal from './components/WelcomeModal/WelcomeModal';
 import InfoButton from './components/InfoButton/InfoButton';
 import Header from './components/Header/Header';
 import FortuneCard from './components/FortuneCard/FortuneCard';
 import QuestionInput from './components/QuestionInput/QuestionInput';
-import ThemeToggle from './components/ThemeToggle/ThemeToggle';
+// import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import Footer from './components/Footer/Footer';
 import { getChanelFortune } from './data/catOracle';
+import './App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,8 +16,8 @@ function App() {
   const [isRevealing, setIsRevealing] = useState(false);
 
   useEffect(() => {
-    document.body.className = darkMode ? 'dark-mode' : 'light-mode';
-  }, [darkMode]);
+  document.body.className = 'dark-mode';
+}, []);
 
   const handleGetFortune = async () => {
   if (!question.trim()) return;
@@ -39,7 +39,7 @@ function App() {
   return (
   <div className="app">
     <div className="app-container">
-      <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+      {/* <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> */}
       <WelcomeModal />
       <InfoButton />
       <Header />
