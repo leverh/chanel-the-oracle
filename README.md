@@ -19,7 +19,7 @@ A whimsical fortune-telling web app featuring Chanel, the most loving and wise o
 4. **Ask Again**: Clear slate for your next burning question
 
 ## 🚀 Live Demo
-[Link](https://sensational-gaufre-78e278.netlify.app/) to live site
+[Chanel The Oracle](https://chanel-the-oracle.netlify.app/) live site link
 
 
 ## 🛠️ Tech Stack
@@ -121,6 +121,8 @@ Modify CSS variables in `src/App.css` to customize colors:
 }
 ```
 
+Following the updates on 17th March 2026, I'm not using the dark and light themes anymore, but just a dark cosmic one. You can,however, find the previous light and dark schemes on previous commits.
+
 ## 🐱 About Chanel
 
 Chanel is a loving rescue cat who found her way to her forever home from a shelter over 8 years ago. Now 15 years young, she takes her oracle duties very seriously while enjoying adventures in her cat stroller to explore the world. She believes all of life's answers can be found through the wisdom of treat jars, sunny windowsills, and the ancient art of 3am zoomies.
@@ -145,6 +147,13 @@ The app analyzes your question for keywords and delivers contextually appropriat
 - **Component-based architecture** for easy maintenance
 - **CSS variables** for efficient theming
 
+### UPDATE UPDATE UPDATE! (17th March 2026)
+Chanel is now connected to the Gemini AI API. As long as it's free and available, Gemini will aid Chanel with her prediction. In case the API is not available, predictions will fall back to the data file. 
+
+The new **catOracle.js** file is inside the data directory and contains the new connection and ai direction code and details. 
+
+With the new AI connection, I decided to also redesign the page. Chanel and I hope you enjoy the new mysterious cosmic look!
+
 
 ## 📄 License
 
@@ -156,6 +165,7 @@ This project is licensed under the MIT License. Copy or share - I really don't c
 
 - **Chanel** - The real MVP and mystical inspiration
 - **Google Fonts** - For the Source Sans 3 typography
+- **Google Gemini AI** - For assisting with predictions
 - **React Team** - For the framework
 - **Vite Team** - For the build tooling
 
